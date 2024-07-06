@@ -1,9 +1,65 @@
+body {
+    background-color: green;
+    padding: 20px;
+    margin: 20px;
+}
+
 .grid {
     display: grid;
+    align-content: center;
+    justify-content: center;
     grid-template-columns: 150px 150px 150px;
 }
 
 .box {
+    font-size: 100px;
     height: 150px;
-    border: 2px black solid;
+    background-color: red;
+    border: 2px rgb(100, 0, 0) solid;
+    display: flex;
+    align-items: center;
+    justify-content : center;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+button {
+    margin-left: 15em;
+    margin-right: 15em;
+    margin-bottom: 50px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  button:hover {background-color: #3e8e41}
+  
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.win {
+    background-color: rgb(16, 224, 16);
+}
+
+.over {
+    font-size: 0px;
+    background-color: red;
+}
+
+.none {
+    display:none
 }
