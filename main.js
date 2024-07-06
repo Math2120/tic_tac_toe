@@ -56,9 +56,16 @@ for(let x = 0; x < boxes.length; x++) {
                         }
                         let condition = true
                         // Vous pouvez ajouter ici le code pour gérer la fin du jeu
+                        turn.classList.add("none")
+                        boxes[a].classList.add("win")
+                        boxes[b].classList.add("win")
+                        boxes[c].classList.add("win")
+
                         for(let x = 0; x < boxes.length; x++) {
                             let box = document.getElementById(x)
-                            box.removeEventListener("click", function() {})
+                            if(box.innerText === "") {
+                                box.classList.add("over")
+                            }
                         }
                         break;
 
@@ -76,6 +83,13 @@ button.addEventListener("click", function() {
     for(let y = 0; y < boxes.length; y++) {
         boxes[y].innerHTML = ""
         turn.innerText = "Turn : x"
+        title.innerText = "TictacToe"
+        for(let x = 0; x < boxes.length; x++) {
+            let box = document.getElementById(x)
+            box.classList.remove("win")
+            box.classList.remove("over")
+            turn.classList.remove("none")
+        }
     }
 })
 
